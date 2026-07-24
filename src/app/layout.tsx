@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     shortcut: "/images/setup-signal-logo.jpeg",
     apple: "/images/setup-signal-logo.jpeg"
   },
+  verification: {
+    google: "-btt6z54K0_YyGQGYlnw_1AaQLExv0T11BA7gkP7yGs"
+  },
   openGraph: {
     type: "website",
     title: siteConfig.name,
