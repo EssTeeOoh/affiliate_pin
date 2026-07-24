@@ -56,11 +56,25 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <div className="page-stack">
-      <section className="hero hero-grid card article-hero">
+      <section className="hero card article-hero">
         <div className="hero-copy-block">
           <p className="eyebrow">Guide</p>
           <h1>{article.frontmatter.title}</h1>
           <p className="hero-copy">{article.frontmatter.intro}</p>
+          {article.frontmatter.coverImage ? (
+            <div className="article-hero-media">
+              <Image
+                src={article.frontmatter.coverImage}
+                alt=""
+                width={180}
+                height={101}
+                priority
+                sizes="180px"
+                quality={95}
+                className="article-hero-image"
+              />
+            </div>
+          ) : null}
           <div className="hero-meta">
             <span>{primaryCategory}</span>
             {secondaryCategories.map((category) => (
@@ -69,19 +83,6 @@ export default async function ArticlePage({ params }: Props) {
             <span>{featuredProducts.length} product picks</span>
           </div>
         </div>
-
-        {article.frontmatter.coverImage ? (
-          <div className="article-hero-media">
-            <Image
-              src={article.frontmatter.coverImage}
-              alt=""
-              fill
-              priority
-              sizes="(max-width: 860px) 100vw, 48vw"
-              className="article-hero-image"
-            />
-          </div>
-        ) : null}
       </section>
 
       <section className="card article-body-shell">

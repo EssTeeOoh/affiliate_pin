@@ -413,15 +413,25 @@ img {
 }
 
 .article-hero-media {
-  min-height: 220px;
-  max-width: 420px;
-  align-self: stretch;
-  justify-self: end;
+  width: 180px;
+  max-width: 180px;
+  min-height: 0;
+  margin-top: 12px;
+  padding: 10px;
+  align-self: start;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.article-card-image-element,
-.article-hero-image {
+.article-card-image-element {
   object-fit: cover;
+}
+
+.article-hero-image,
+.product-hero-image {
+  object-fit: contain;
 }
 
 .article-hero {
@@ -429,7 +439,7 @@ img {
 }
 
 .article-hero.hero-grid {
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr;
 }
 
 .product-hero.hero-grid {
@@ -439,25 +449,32 @@ img {
 
 .product-hero-media {
   position: relative;
-  min-height: 240px;
-  max-width: 360px;
+  min-height: 220px;
+  max-width: 300px;
   justify-self: end;
   width: 100%;
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, #fff, #f8fbff);
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
   box-shadow: var(--shadow-soft);
+  padding: 12px;
 }
 
 .product-hero-image {
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
-.product-hero-media a,
+.product-hero-media a {
+  position: absolute;
+  inset: 12px;
+  display: block;
+}
+
 .product-hero-fallback {
   position: absolute;
-  inset: 0;
+  inset: 12px;
   display: block;
 }
 
@@ -868,6 +885,24 @@ img {
   min-width: 150px;
 }
 
+.article-body-shell .prose-shell :where(img) {
+  display: block;
+  width: auto;
+  max-width: min(100%, 240px);
+  max-height: 220px;
+  height: auto;
+  margin: 18px 0;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  background: #fff;
+}
+
+.article-body-shell .prose-shell :where(a > img) {
+  display: block;
+}
+
 .trust-band {
   display: flex;
   justify-content: space-between;
@@ -1017,6 +1052,10 @@ html[data-theme="dark"] .spotlight-tab.is-active {
   border-color: var(--accent);
 }
 
+html[data-theme="dark"] .product-hero-media {
+  background: linear-gradient(180deg, rgba(20, 30, 47, 0.96), rgba(16, 25, 40, 0.96));
+}
+
 html[data-theme="dark"] .spotlight-dot {
   background: var(--accent);
   box-shadow: 0 0 0 5px rgba(110, 156, 255, 0.16);
@@ -1158,6 +1197,19 @@ html[data-theme="dark"] .photo-tile::after {
   .photo-tile-large,
   .photo-tile-medium {
     min-height: 240px;
+  }
+
+  .article-hero-media,
+  .product-hero-media {
+    max-width: 100%;
+    justify-self: stretch;
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .article-hero-media {
+    width: min(100%, 220px);
+    padding: 8px;
   }
 
   .site-header,
