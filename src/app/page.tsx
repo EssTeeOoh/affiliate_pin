@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArticleCard } from "@/components/article-card";
 import { CategoryCard } from "@/components/category-card";
 import { FeaturedSpotlight } from "@/components/featured-spotlight";
@@ -40,14 +39,6 @@ export default async function HomePage() {
             <span>Reviews</span>
             <span>Categories</span>
             <span>Guides</span>
-          </div>
-          <div className="hero-actions">
-            <Link href="/categories" className="button">
-              Explore categories
-            </Link>
-            <Link href="/affiliate-disclosure" className="button button-secondary">
-              Affiliate disclosure
-            </Link>
           </div>
         </div>
 

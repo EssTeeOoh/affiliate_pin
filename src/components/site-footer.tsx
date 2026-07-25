@@ -13,9 +13,10 @@ export function SiteFooter() {
         </p>
       </div>
 
-      <nav className="footer-links-group" aria-label="Legal">
-        <p className="footer-links-title">Legal</p>
+      <nav className="footer-links-group" aria-label="Footer">
+        <p className="footer-links-title">Links</p>
         <div className="footer-links">
+          <Link href="/about">About</Link>
           <Link href="/affiliate-disclosure">Affiliate disclosure</Link>
           <Link href="/privacy-policy">Privacy policy</Link>
           <Link href="/terms-of-use">Terms of use</Link>

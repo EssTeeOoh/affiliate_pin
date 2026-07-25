@@ -12,9 +12,7 @@ export const siteConfig = {
     "As an Amazon Associate, we may earn from qualifying purchases.",
   navLinks: [
     { href: "/categories", label: "Categories" },
-    { href: "/articles", label: "Articles" },
-    { href: "/about", label: "About" },
-    { href: "/affiliate-disclosure", label: "Disclosure" }
+    { href: "/articles", label: "Articles" }
   ]
 };
 
