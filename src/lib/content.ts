@@ -135,6 +135,10 @@ function matchesQuery(value: string | undefined, query: string) {
   return value ? value.toLowerCase().includes(query) : false;
 }
 
+function matchesAnyQuery(values: Array<string | undefined> | undefined, query: string) {
+  return values?.some((value) => matchesQuery(value, query)) ?? false;
+}
+
 export const searchCatalog = cache(async (rawQuery: string) => {
   const query = rawQuery.trim().toLowerCase();
   const [categories, products, articles] = await Promise.all([
@@ -161,7 +165,9 @@ export const searchCatalog = cache(async (rawQuery: string) => {
         matchesQuery(doc.frontmatter.title, query) ||
         matchesQuery(doc.frontmatter.summary, query) ||
         matchesQuery(doc.frontmatter.bestFor, query) ||
-        matchesQuery(doc.frontmatter.category.replace(/-/g, " "), query)
+        matchesQuery(doc.frontmatter.brand, query) ||
+        matchesQuery(doc.frontmatter.category.replace(/-/g, " "), query) ||
+        matchesAnyQuery(doc.frontmatter.searchTerms, query)
     ),
     articles: articles.filter(
       (doc) =>

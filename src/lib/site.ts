@@ -2,6 +2,7 @@ const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` :
 
 export const siteConfig = {
   name: "Setup Signal",
+  tagline: "Curated gear for better setups.",
   description:
     "Curated recommendations for gaming, desk setup, PC accessories, mobile accessories, tech gadgets, and work-from-home essentials.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? vercelUrl ??

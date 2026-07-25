@@ -16,7 +16,10 @@ export function SiteHeader() {
             className="brand-logo"
             priority
           />
-          <span>{siteConfig.name}</span>
+          <span className="brand-copy">
+            <span className="brand-name">{siteConfig.name}</span>
+            <span className="brand-tagline">{siteConfig.tagline}</span>
+          </span>
         </Link>
         <div className="site-header-tools">
           <form className="site-search" action="/search" method="get" role="search">
@@ -27,13 +30,13 @@ export function SiteHeader() {
               </svg>
             </span>
             <label className="sr-only" htmlFor="site-search">
-              Search products and categories
+              Search products, brands, and categories
             </label>
             <input
               id="site-search"
               name="q"
               type="search"
-              placeholder="Search products, categories..."
+              placeholder="Search products, brands, or categories..."
             />
           </form>
           <ThemeToggle />

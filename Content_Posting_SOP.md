@@ -8,10 +8,12 @@ Intro that explains who the guide is for and what problem it solves.
 
 Repeat for each of 5 products:
 - Product
+- Brand
 - Why it's useful
 - Pros
 - Cons
 - Best for
+- Optional search terms
 - Amazon button
 
 Conclusion + FAQ or final recommendation.
@@ -62,6 +64,11 @@ Suggested article metadata:
 
 - Primary category: Gaming
 - Secondary categories: Desk Setup, Cable Management and Organization
+
+Suggested product metadata:
+
+- Brand: Logitech, AULA, Govee, Alex Tech, Anker, or the correct manufacturer name
+- Search terms: brand name variants, product type, and common shorthand if needed
 
 Alternative future articles: - Top 5 USB-C Hubs - Top 5 Desk Lighting
 Products - Top 5 Laptop Accessories

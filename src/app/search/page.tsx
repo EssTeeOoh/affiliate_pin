@@ -16,7 +16,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 
   return {
     title: query ? `Search results for "${query}"` : "Search",
-    description: `Search categories, guides, and product reviews at ${siteConfig.name}.`,
+    description: `Search categories, guides, product reviews, and brands at ${siteConfig.name}.`,
     alternates: {
       canonical: "/search"
     }
@@ -36,18 +36,18 @@ export default async function SearchPage({ searchParams }: Props) {
         <p className="eyebrow">Search</p>
         <h1>Search the catalog with one query.</h1>
         <p className="hero-copy">
-          Search across categories, guides, and product reviews from a single page.
+          Search across categories, guides, product reviews, and brand names from a single page.
         </p>
         <form className="search-form search-form-large" action="/search" method="get" role="search">
           <label className="sr-only" htmlFor="search-page-query">
-            Search products and categories
+            Search products, brands, and categories
           </label>
           <input
             id="search-page-query"
             name="q"
             type="search"
             defaultValue={query}
-            placeholder="Try mechanical keyboard, desk setup, or USB-C hub"
+            placeholder="Try mechanical keyboard, Logitech, or USB-C hub"
           />
           <button type="submit" className="button">
             Search
@@ -57,6 +57,7 @@ export default async function SearchPage({ searchParams }: Props) {
           <span>Keyboard</span>
           <span>Desk setup</span>
           <span>Mouse</span>
+          <span>Logitech</span>
           <span>USB-C hub</span>
         </div>
       </section>
@@ -108,7 +109,7 @@ export default async function SearchPage({ searchParams }: Props) {
         ) : (
           <div className="card search-empty">
             <h2>No category matches found.</h2>
-            <p>Try a broader search term like “gaming” or “desk setup”.</p>
+            <p>Try a broader search term like &quot;gaming&quot; or &quot;desk setup&quot;.</p>
           </div>
         )}
       </section>
@@ -132,7 +133,7 @@ export default async function SearchPage({ searchParams }: Props) {
         ) : (
           <div className="card search-empty">
             <h2>No product matches found.</h2>
-            <p>Try a product name, category, or use-case.</p>
+            <p>Try a product name, brand name, category, or use-case.</p>
           </div>
         )}
       </section>

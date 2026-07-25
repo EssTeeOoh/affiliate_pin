@@ -156,6 +156,23 @@ img {
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
+.brand-copy {
+  display: grid;
+  gap: 1px;
+}
+
+.brand-name {
+  line-height: 1.05;
+}
+
+.brand-tagline {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
 .site-nav,
 .footer-links,
 .hero-actions,
@@ -1205,6 +1222,23 @@ html[data-theme="dark"] .photo-tile::after {
     justify-self: stretch;
     width: 100%;
     aspect-ratio: auto;
+  }
+
+  .product-hero.hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-hero-media {
+    order: 2;
+    max-width: 100%;
+    min-height: 260px;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .product-hero-media a,
+  .product-hero-fallback {
+    inset: 12px;
   }
 
   .article-hero-media {

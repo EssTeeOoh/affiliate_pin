@@ -21,6 +21,7 @@ export type ProductFrontmatter = {
   slug: string;
   category: string;
   summary: string;
+  brand?: string;
   image?: string;
   bestFor?: string;
   rating?: number;
@@ -30,6 +31,7 @@ export type ProductFrontmatter = {
   videoUrl?: string;
   seoTitle?: string;
   seoDescription?: string;
+  searchTerms?: string[];
   pros?: string[];
   cons?: string[];
 };

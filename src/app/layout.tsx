@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     canonical: "/"
   },
   icons: {
-    icon: "/images/setup-signal-logo.jpeg",
-    shortcut: "/images/setup-signal-logo.jpeg",
-    apple: "/images/setup-signal-logo.jpeg"
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico"
   },
   verification: {
     google: "-btt6z54K0_YyGQGYlnw_1AaQLExv0T11BA7gkP7yGs"
@@ -39,7 +39,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: siteConfig.name,
-    description: siteConfig.description
+    description: siteConfig.description,
+    siteName: siteConfig.name
   },
   twitter: {
     card: "summary",
