@@ -9,6 +9,17 @@ export default function Head() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: siteConfig.name,
+            url: siteConfig.url
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@graph": [
               {
                 "@type": "Organization",
