@@ -11,6 +11,8 @@ export default function Head() {
             {
               "@type": "Organization",
               name: siteConfig.name,
+              alternateName: siteConfig.tagline,
+              description: siteConfig.description,
               url: siteConfig.url,
               logo: `${siteConfig.url}/favicon.ico`
             },
@@ -18,6 +20,7 @@ export default function Head() {
               "@type": "WebSite",
               name: siteConfig.name,
               alternateName: siteConfig.tagline,
+              description: siteConfig.description,
               url: siteConfig.url,
               potentialAction: {
                 "@type": "SearchAction",

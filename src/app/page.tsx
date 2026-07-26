@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ArticleCard } from "@/components/article-card";
 import { CategoryCard } from "@/components/category-card";
 import { FeaturedSpotlight } from "@/components/featured-spotlight";
@@ -7,6 +8,24 @@ import { ProductCard } from "@/components/product-card";
 import { SectionHeading } from "@/components/section-heading";
 import { getFeaturedArticles, getFeaturedCategories, getFeaturedProducts } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: siteConfig.name,
+  description:
+    "Setup Signal curates practical recommendations for gaming desks, accessories, and everyday work setups.",
+  openGraph: {
+    title: siteConfig.name,
+    description:
+      "Setup Signal curates practical recommendations for gaming desks, accessories, and everyday work setups.",
+    siteName: siteConfig.name
+  },
+  twitter: {
+    card: "summary",
+    title: siteConfig.name,
+    description:
+      "Setup Signal curates practical recommendations for gaming desks, accessories, and everyday work setups."
+  }
+};
 
 export default async function HomePage() {
   const [featuredCategories, featuredProducts] = await Promise.all([
